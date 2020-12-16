@@ -2,7 +2,7 @@ package az.mycompany.javalessons.lesson4;
 
 import java.util.Scanner;
 
-public class PasswordExample {
+public class        PasswordExample {
     public static void main(String[] args) {
 
         String password;
