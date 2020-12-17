@@ -25,7 +25,7 @@ public class EdedSual1 {
             }
             else {
                 System.out.println("Secim duzgun deyil : (y / n)");
-                bool2=true;
+
             }
         }
     }
