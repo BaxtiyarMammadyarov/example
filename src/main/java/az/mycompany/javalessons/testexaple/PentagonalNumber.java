@@ -2,14 +2,14 @@ package az.mycompany.javalessons.testexaple;
 
 public class PentagonalNumber {
     public static void main(String[] args) {
-        PentagonalNum1(1000);
+        pentagonalNum(10000);
         System.out.println("\n ---------------------------------------");
 
-        PentagonalList(25);
+        pentagonalList(100);
 
     }
 
-    public static void PentagonalNum1(int number){
+    public static void pentagonalNum(int number){
         int pentagonalnumber=1,index=1;
 
         while(pentagonalnumber<number){
@@ -19,14 +19,12 @@ public class PentagonalNumber {
         }
     }
 
-    public static void PentagonalList(int number){
-        int pentagonalnumber =1;//pentagonalnum
-        System.out.print(pentagonalnumber );
-        for(int i=1;i<number;i++){
-
+    public static void pentagonalList(int number){
+        int pentagonalnumber =0;//pentagonalnum
+        for(int i=0;i<number;i++){
             pentagonalnumber = (pentagonalnumber + 1) + 3 * i;
+            System.out.print(pentagonalnumber+"  ");
 
-            System.out.print("  "+pentagonalnumber );
         }
 
     }
