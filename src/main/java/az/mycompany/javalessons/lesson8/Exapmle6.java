@@ -2,7 +2,7 @@ package az.mycompany.javalessons.lesson8;
 
 
 
-import static az.mycompany.javalessons.lesson8.Example3.sumQuickDivisor;
+import static az.mycompany.javalessons.lesson8.Example3.sumDivisor;
 
 public class Exapmle6 {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Exapmle6 {
     }
     public static void deficientNumber(int  number){
 
-      if (sumQuickDivisor(number)<number) System.out.println(number+" is a deficient number");
+      if (sumDivisor(number)<number) System.out.println(number+" is a deficient number");
       else System.out.println(number+" is not a deficient number");
 
     }
