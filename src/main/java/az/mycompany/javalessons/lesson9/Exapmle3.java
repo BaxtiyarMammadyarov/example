@@ -1,20 +1,16 @@
 package az.mycompany.javalessons.lesson9;
 
 
-
-import java.util.Scanner;
-
 public class Exapmle3 {
 
 
 
     public static void main(String[] args) {
-        Scanner scn =new Scanner(System.in);
-        System.out.print("martisin olcunu daxil edin : ");
-        int number =scn.nextInt();
+        long starttime=System.nanoTime();
+        int number =1000;
         showMatrix(number);
-
-
+        long endtime=System.nanoTime();
+        System.out.println("\n"+(endtime-starttime)/100000000);
     }
     public static void showMatrix(int number){
         int[][] matris=new int[number][number];

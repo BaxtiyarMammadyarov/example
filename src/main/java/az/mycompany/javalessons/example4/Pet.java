@@ -2,12 +2,12 @@ package az.mycompany.javalessons.example4;
 
 
 
-public class Pet  {
-    String species;
-    String nickname;
-    byte age;
-    byte trickLevel;
-    String[] habits;
+public class Pet implements MetodPet  {
+   private String species;
+   private String nickname;
+    private byte age;
+   private byte trickLevel;
+   private String[] habits;
     public Pet(){
 
     }
@@ -58,8 +58,21 @@ public class Pet  {
         this.species = species;
     }
 
+    @Override
+    public String habitsPet(int index) {
+
+        return nickname+" "+habits[index];}
 
 
+    @Override
+    public void respondPet() {
+        System.out.println("'Hello, I am "+nickname+". I miss you!'");
+    }
 
+    @Override
+    public void foul() {
+        System.out.println("I need to cover it up");
+
+    }
 
 }

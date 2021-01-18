@@ -1,7 +1,9 @@
 package az.mycompany.javalessons.lesson9;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Matrix {
   private ArrayList<ArrayList>matrix=new ArrayList<>();
@@ -17,25 +19,24 @@ public class Matrix {
                    arr.add(j, (int) (Math.random() * 100));
            return arr;
        }
-       public List<Integer> elementsLineMatrix(int indexline){
+       public ArrayList<Integer> elementsLineMatrix(int indexline){
                             return  matrix.get(indexline);
        }
        public Integer elementMatrix(int indexline,int indexcolumn){
          return elementsLineMatrix(indexline).get(indexcolumn);
        }
    public void showMatrix(){
-       for(List i:matrix)
+       for(ArrayList  i:matrix)
            System.out.println(i.toString().replace(",","").replace("[","").replace("]",""));
         }
 
     public static void main(String[] args) {
+        long starttime=System.nanoTime();
         Matrix matrix=new Matrix();
-        matrix.setMatrix(4);
+        matrix.setMatrix(1000);
         matrix.showMatrix();
-        System.out.println("-----------------------------------");
-        System.out.println( matrix.elementsLineMatrix(3));
-        System.out.println("------------------------------------");
-        System.out.println(matrix.elementMatrix(3,3));
+        long endtime=System.nanoTime();
 
+        System.out.println((endtime-starttime)/100000000);
     }
 }

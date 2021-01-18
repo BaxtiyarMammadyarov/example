@@ -1,12 +1,12 @@
 package az.mycompany.javalessons.example4;
 
-public class Man extends Human implements MetodMan,MetodPet{
-    public Man(){
+public class Person extends Human implements MetodPerson{
+    public Person(){
         super();
     }
-    Pet pet;
-    Human father;
-    Human mother;
+   private Pet pet;
+   private Human father;
+   private Human mother;
 
     public Pet getPet() {
         return pet;
@@ -32,13 +32,19 @@ public class Man extends Human implements MetodMan,MetodPet{
         this.mother = mother;
     }
     public void showHuman(){
-        System.out.println(name+" "+surname+"\n "+dateofbirthyear+"\n "+iqlevel+"\n "+father.getName()+"  "+father.getSurname()+"\n "+ mother.getName()+" "+mother.getSurname()+"\n "+ pet.petShow());
+        System.out.println(getName()+" "
+                +getSurname()+"\n "
+                +getDateofbirthyear()+"\n "
+                +getIqlevel()+"\n "
+                +father.getName()+"  "+father.getSurname()+"\n "
+                +mother.getName()+" "+ mother.getSurname()+"\n "
+                + pet.petShow());
     }
 
 
     @Override
     public void greetPet() {
-        System.out.println("Hello "+pet.nickname);
+        System.out.println("Hello "+pet.getNickname());
     }
 
     @Override
@@ -49,19 +55,5 @@ public class Man extends Human implements MetodMan,MetodPet{
 
     }
 
-    @Override
-    public String habitsPet(int index) {
 
-          return pet.nickname+" "+pet.habits[index];}
-
-
-    @Override
-    public void respondPet() {
-
-    }
-
-    @Override
-    public void foul() {
-
-    }
 }

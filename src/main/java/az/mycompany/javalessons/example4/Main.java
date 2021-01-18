@@ -4,7 +4,7 @@ package az.mycompany.javalessons.example4;
 
 public class Main  {
     public static void main(String[] args) {
-        Man man=new Man();
+        Person man=new Person();
         man.setName("Michael");
         man.setSurname("Karleone");
         man.setDateofbirthyear(1997);
@@ -15,7 +15,7 @@ public class Main  {
         man.setPet(new Pet("dog","Rock", 5, 75,habits));
 
         man.showHuman();
-        System.out.println(man.habitsPet(2));
+        System.out.println(man.getPet().habitsPet(1));
 
 }
 }

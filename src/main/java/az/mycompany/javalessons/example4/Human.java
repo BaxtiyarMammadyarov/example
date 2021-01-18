@@ -2,11 +2,11 @@ package az.mycompany.javalessons.example4;
 
 
 
-public class Human  {
-    String name;
-    String surname;
-    int dateofbirthyear ;
-    byte iqlevel ;// (a whole number from 1 to 100))
+public  class Human  {
+   private String name;
+   private String surname;
+   private int dateofbirthyear ;
+    private byte iqlevel ;// (a whole number from 1 to 100))
     public Human(){
 
     }
