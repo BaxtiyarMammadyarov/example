@@ -2,7 +2,7 @@ package az.mycompany.javalessons.exampleOOP;
 
 
 
-public class Pet implements MetodPet  {
+public class Pet implements ActivitePet  {
    private String species;
    private String nickname;
     private byte age;
