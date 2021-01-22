@@ -1,6 +1,6 @@
-package az.mycompany.javalessons.leesson10;
+package az.mycompany.javalessons.lesson10;
 
-import static az.mycompany.javalessons.leesson10.Example_2.addSpace;
+import static az.mycompany.javalessons.lesson10.Example_2.addSpace;
 
 public class Example_3 {
 

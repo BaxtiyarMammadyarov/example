@@ -1,6 +1,4 @@
-package az.mycompany.javalessons.leesson10;
-
-import sun.util.resources.CalendarData;
+package az.mycompany.javalessons.lesson10;
 
 import java.time.LocalDate;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package az.mycompany.javalessons.leesson10;
+package az.mycompany.javalessons.lesson10;
 
 public class Example_2 {
     public static void main(String[] args) {
