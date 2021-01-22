@@ -7,6 +7,18 @@ public class Person extends Human implements MetodPerson{
    private Pet pet;
    private Human father;
    private Human mother;
+    private String[] schedule=new String[2];
+
+    public String[] getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String nonworkingday,String nonworkingactiviti) {
+
+        schedule[0]=nonworkingday;
+        schedule[1]=nonworkingactiviti;
+
+    }
 
     public Pet getPet() {
         return pet;
@@ -53,6 +65,9 @@ public class Person extends Human implements MetodPerson{
             System.out.println("species :"+pet.getAge()+"\n"+"age : "+pet.getAge()+"\n"+"very sly");
         } else  System.out.println("species :"+pet.getAge()+"\n"+"age : "+pet.getAge()+"\n"+"almost not sly");
 
+    }
+    public void nonWorkingActiviti(){
+        System.out.println(schedule[0]+":"+schedule[1]);
     }
 
 
