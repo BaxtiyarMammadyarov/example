@@ -1,4 +1,4 @@
-package az.mycompany.javalessons.example4;
+package az.mycompany.javalessons.exampleOOP;
 
 public class Person extends Human implements ActivitePerson {
     public Person(){

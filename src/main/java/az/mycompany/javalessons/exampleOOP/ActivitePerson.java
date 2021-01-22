@@ -1,4 +1,4 @@
-package az.mycompany.javalessons.example4;
+package az.mycompany.javalessons.exampleOOP;
 
 public interface ActivitePerson {
     void greetPet();     //("Hello, [the name of the pet]")

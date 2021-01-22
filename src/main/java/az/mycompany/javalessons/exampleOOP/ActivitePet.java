@@ -1,4 +1,4 @@
-package az.mycompany.javalessons.example4;
+package az.mycompany.javalessons.exampleOOP;
 
 public interface ActivitePet {
   String  habitsPet(int i); //method displays a message 'I am eating'
