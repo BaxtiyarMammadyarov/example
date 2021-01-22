@@ -1,6 +1,6 @@
 package az.mycompany.javalessons.example4;
 
-public interface MetodPet {
+public interface ActivitePet {
   String  habitsPet(int i); //method displays a message 'I am eating'
 
 

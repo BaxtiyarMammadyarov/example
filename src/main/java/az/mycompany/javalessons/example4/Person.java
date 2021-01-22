@@ -1,6 +1,6 @@
 package az.mycompany.javalessons.example4;
 
-public class Person extends Human implements MetodPerson{
+public class Person extends Human implements ActivitePerson {
     public Person(){
         super();
     }
