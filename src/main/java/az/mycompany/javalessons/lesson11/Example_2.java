@@ -9,8 +9,8 @@ public class Example_2 {
         int[] array=new int[100000000];
 
         Map<Integer,Integer> map=new HashMap<>();
-     for (int i=1;i<=array.length;i++)
-               array[i-1]=((int)(Math.random()*150))+1;
+     for (int i=0;i<array.length;i++)
+               array[i]=((int)(Math.random()*150));
 
 
         for (int j:array)

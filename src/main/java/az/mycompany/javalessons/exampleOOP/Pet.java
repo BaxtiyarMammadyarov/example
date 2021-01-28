@@ -1,22 +1,25 @@
 package az.mycompany.javalessons.exampleOOP;
 
 
+import java.util.HashSet;
+import java.util.Set;
 
 public class Pet implements ActivitePet  {
    private String species;
    private String nickname;
     private byte age;
    private byte trickLevel;
-   private String[] habits;
+   private Set<String> habits=new HashSet<>();
     public Pet(){
 
     }
-    public Pet( String species,String nickname, int age, int trickLevel,String[]habits){
+    public Pet( String species,String nickname, int age, int trickLevel,Set<String> habits){
        this.species=species;
        this.nickname=nickname;
        this.age=(byte) age;
        this.trickLevel=(byte) trickLevel;
-       this.habits=habits;
+       for (String i:habits)
+             this.habits.add(i);
 
     }
     public String petShow(){
@@ -45,11 +48,12 @@ public class Pet implements ActivitePet  {
         if(Level>=1||Level<=100) this.trickLevel = (byte) Level;
         else System.out.println("input a Level number from 1 to 100");
     }
-    public String[] getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
-    public void setHabits(String[] habits) {
-        this.habits = habits;
+    public void setHabits(Set<String> habits) {
+        for(String i:habits)
+            this.habits.add(i);
     }
     public String getSpecies() {
         return species;
@@ -61,7 +65,7 @@ public class Pet implements ActivitePet  {
     @Override
     public String habitsPet(int index) {
 
-        return nickname+" "+habits[index];}
+        return nickname+" "+habits;}
 
 
     @Override

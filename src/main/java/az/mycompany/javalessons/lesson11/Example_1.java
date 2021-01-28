@@ -2,14 +2,13 @@ package az.mycompany.javalessons.lesson11;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+
 import java.util.List;
 
 public class Example_1 {
     public static void main(String[] args) {
-        String str="Hello World";
+        String str="Hello world";
         String result="";
-       // List<Character> arr=new ArrayList<>();
       List<String>list=new ArrayList<>();
         for (String i:str.split(" "))
                list.add(i);
@@ -25,8 +24,8 @@ public class Example_1 {
             }
             Arrays.sort(arr);
             for (char ch:arr) {
-                if((int)ch!=index) result+=ch;
-                else result+=(char)oldindex;
+                 if((int)ch!=index) result+=ch;
+                 else result+=(char)oldindex;
             }
 
             result+=" ";

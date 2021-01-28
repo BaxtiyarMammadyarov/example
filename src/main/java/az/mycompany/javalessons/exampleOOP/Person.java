@@ -1,5 +1,8 @@
 package az.mycompany.javalessons.exampleOOP;
 
+
+import java.util.HashMap;
+
 public class Person extends Human implements ActivitePerson {
     public Person(){
         super();
@@ -7,18 +10,13 @@ public class Person extends Human implements ActivitePerson {
    private Pet pet;
    private Human father;
    private Human mother;
-    private String[] schedule=new String[2];
+    private HashMap<String,String> schedule=new HashMap<>();
 
-    public String[] getSchedule() {
+    public HashMap<String,String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(String nonworkingday,String nonworkingactiviti) {
-
-        schedule[0]=nonworkingday;
-        schedule[1]=nonworkingactiviti;
-
-    }
+    public void setSchedule(String day,String dayactiviti) {schedule.put(day,dayactiviti) ;  }
 
     public Pet getPet() {
         return pet;
@@ -27,6 +25,7 @@ public class Person extends Human implements ActivitePerson {
     public void setPet(Pet pet) {
         this.pet = pet;
     }
+
 
     public Human getFather() {
         return father;
@@ -66,8 +65,8 @@ public class Person extends Human implements ActivitePerson {
         } else  System.out.println("species :"+pet.getAge()+"\n"+"age : "+pet.getAge()+"\n"+"almost not sly");
 
     }
-    public void nonWorkingActiviti(){
-        System.out.println(schedule[0]+":"+schedule[1]);
+    public void nonWorkingActiviti(String day){
+        System.out.println(day+":"+schedule.get(day));
     }
 
 
