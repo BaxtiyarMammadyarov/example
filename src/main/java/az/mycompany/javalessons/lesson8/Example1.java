@@ -6,6 +6,10 @@ public class Example1 {
     public static void main(String[] args) {
         int[] numberarray={5,7,1,9,-10,10,2};
         firstTwoMinNumberArray(numberarray);
+        /*
+        *
+        *
+        * */
 
     }
 

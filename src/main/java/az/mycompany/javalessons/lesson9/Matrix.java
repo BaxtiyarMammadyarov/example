@@ -10,7 +10,7 @@ public class Matrix {
 
    public  void setMatrix(int number){
         for (int i=0;i<number;i++ )
-              matrix.add(0, inputArray(number));
+              matrix.add(i, inputArray(number));
         }
 
         ArrayList<Integer>inputArray(int num) {

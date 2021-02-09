@@ -1,8 +1,10 @@
 package az.mycompany.javalessons.lesson9;
 
 public class LeapYearTest {
+
     public static void main(String[] args) {
-        leapYearTest(1000);
+         leapYearTest(400);
+
 
     }
     public static void leapYearTest(int number){
