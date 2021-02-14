@@ -1,7 +1,10 @@
 package az.mycompany.javalessons.testexaple;
 
-public class sadeBolenler {
+public class SadeBolenler {
     public static void main(String[] args) {
+        simpleDivisor(100);
+        System.out.println(simpleDivisor(100));
+
 
     }
     public static int simpleDivisor(int number){

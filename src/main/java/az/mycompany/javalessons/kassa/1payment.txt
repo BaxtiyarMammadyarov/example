@@ -1,0 +1,5 @@
+1 Java kitab 20
+5 CCs kitab 10
+2 C# kitab 18
+
+Mebleg------ 48
