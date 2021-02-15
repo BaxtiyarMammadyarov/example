@@ -30,7 +30,7 @@ public class WriteReadFile {
         File file=new File("D:\\IdeaProjects\\example\\src\\main\\java\\az\\mycompany\\javalessons\\OOPproject\\out.txt");
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))  ;
           humanList.stream()
-                  .sorted(Comparator.comparing(human -> human.getAge()))
+                  .sorted(Comparator.comparingInt(Human::getAge))
                   .forEach(human -> {
               try  {
                   bw.write( human.getName() + " "

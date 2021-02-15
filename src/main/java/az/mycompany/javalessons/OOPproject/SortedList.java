@@ -1,9 +1,13 @@
 package az.mycompany.javalessons.OOPproject;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class AvgAgeHuman {
+public class SortedList {
+
     public static void main(String[] args) {
         List<Human> humanList=new ArrayList<>();
         humanList.add(new Human("Steven","King",45,"Kochhar","Neena"));
@@ -22,25 +26,18 @@ public class AvgAgeHuman {
         humanList.add(new Human("Hermann","Baer",37,"William","Shelley"));
         humanList.add(new Human("Douglas","Grant",53,"Kevin","Susan"));
 
-        System.out.println(humanList
-                           .stream()
-                           .collect(Collectors.averagingInt(Human::getAge)));
+        humanList
+                 .stream()
+                 .sorted(Comparator.comparingInt(Human::getAge).reversed())
+                .forEach(human -> System.out.println(human.toString()));
+        System.out.println("-----------------------------------------------");
+
+        humanList.forEach(System.out::println);
 
 
-        System.out.println( humanList
-                            .stream()
-                            .min(Comparator
-                            .comparingInt(Human::getAge))
-                            .orElseThrow(NoSuchElementException::new));
-        System.out.println(humanList
-                .stream()
-                .min(Comparator
-                .comparingInt(Human::getAge))
-                .orElseThrow(NoSuchElementException::new));
 
-        System.out.println(humanList
-                           .stream()
-                           .collect(Collectors.summingInt(Human::getAge)));
+
+
 
     }
 }
