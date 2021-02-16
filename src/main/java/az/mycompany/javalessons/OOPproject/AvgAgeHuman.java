@@ -34,8 +34,8 @@ public class AvgAgeHuman {
                                    .get()
                                    .getAge());
 
-        humanList.
-                stream()
+        humanList
+                .stream()
                 .filter(human ->human.getAge()==humanList
                                                 .stream()
                                                 .min(Comparator.comparingInt(Human::getAge))
@@ -51,8 +51,8 @@ public class AvgAgeHuman {
                                   .get()
                                   .getAge());
 
-        humanList.
-                stream()
+        humanList
+                .stream()
                 .filter(human ->human.getAge()==humanList
                                                .stream()
                                                .max(Comparator.comparingInt(Human::getAge))
