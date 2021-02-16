@@ -42,7 +42,7 @@ public class AvgAgeHuman {
                                      .comparingInt(Human::getAge))
                                       .get()
                                       .getAge())
-                .forEach(System.out::println);
+                .forEach(human -> System.out.println(human.toString()));
 
 
         System.out.println("----------------Age Max-------------------");
@@ -61,7 +61,7 @@ public class AvgAgeHuman {
                                                .comparingInt(Human::getAge))
                                                .get()
                                                .getAge())
-                .forEach(System.out::println);
+                .forEach(human -> System.out.println(human.toString()));
 
         System.out.println("----------------Age Sum-------------------");
 
