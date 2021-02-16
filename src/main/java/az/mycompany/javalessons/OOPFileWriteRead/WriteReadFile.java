@@ -1,13 +1,9 @@
-package az.mycompany.javalessons.OOPproject;
-
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+package az.mycompany.javalessons.OOPFileWriteRead;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class WriteReadFile {
     public static void main(String[] args) throws IOException {

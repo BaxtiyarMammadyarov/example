@@ -1,11 +1,13 @@
-package az.mycompany.javalessons.OOPproject;
+package az.mycompany.javalessons.OOPFileWriteRead;
+
+
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-
-public class SortedList {
+public class TreeMapClass {
 
     public static void main(String[] args) {
         List<Human> humanList=new ArrayList<>();
@@ -24,34 +26,15 @@ public class SortedList {
         humanList.add(new Human("Samuel","McCain",43,"Pat","Jennifer"));
         humanList.add(new Human("Hermann","Baer",37,"William","Shelley"));
         humanList.add(new Human("Douglas","Grant",53,"Kevin","Susan"));
-        System.out.println("------------------Age sorted asc--------------------------");
-        humanList
-                 .stream()
-                 .sorted(Comparator.comparingInt(Human::getAge))
-                .forEach(System.out::println);
 
-        System.out.println("------------------Age sorted desc-----------------------------");
-
-        humanList
-                .stream()
-                .sorted(Comparator.comparingInt(Human::getAge).reversed())
-                .forEach(System.out::println);
-
-        System.out.println("----------------Name sorted asc-------------------------------");
-
-        humanList
-                .stream()
-                .sorted(Comparator.comparing(Human::getName))
-                .forEach(System.out::println);
-
-        System.out.println("------------------Name sorted desc-----------------------------");
-
-        humanList
-                .stream()
-                .sorted(Comparator.comparing(Human::getName).reversed())
-                .forEach(System.out::println);
-
-
+        Map<Integer,Human> sortAge=new TreeMap<>();
+        humanList.forEach(human -> sortAge.put(human.getAge(),human));
+        sortAge.forEach((integer, human) -> System.out.println(sortAge.get(integer).toString()));
+        System.out.println("-------------------------------------------");
+        System.out.println("-------------------------------------------");
+        Map<String,Human>sortName=new TreeMap<>();
+        humanList.forEach(human -> sortName.put(human.getName(),human));
+        sortName.forEach((s, human) -> System.out.println(sortName.get(s).toString()));
 
 
 

@@ -1,4 +1,4 @@
-package az.mycompany.javalessons.OOPproject;
+package az.mycompany.javalessons.OOPFileWriteRead;
 
 public class Human {
     private  String name;
