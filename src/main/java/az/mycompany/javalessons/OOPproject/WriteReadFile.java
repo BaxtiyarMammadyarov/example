@@ -46,9 +46,15 @@ public class WriteReadFile {
           });
           bw.close();
 
+          BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+          try {
+              while (br.ready()){
+                  System.out.println(br.readLine());
+              }
 
-
-
+          }catch (IOException e){
+              System.out.println(e.getMessage());
+          }
 
     }
 }

@@ -17,28 +17,55 @@ public class AvgAgeHuman {
         humanList.add(new Human("McEwen","Doran",60,"Allan","Clara"));
         humanList.add(new Human("William","Smith",38,"Harrison","Lisa"));
         humanList.add(new Human("Ellen","Abel",23,"Jack","Julia"));
-        humanList.add(new Human("Smith","James",33,"Michael","Diana"));
+        humanList.add(new Human("Smith","James",23,"Michael","Diana"));
         humanList.add(new Human("Samuel","McCain",43,"Pat","Jennifer"));
         humanList.add(new Human("Hermann","Baer",37,"William","Shelley"));
         humanList.add(new Human("Douglas","Grant",53,"Kevin","Susan"));
-
-        System.out.println(humanList
+        System.out.println("----------------Age AVG-------------------");
+        System.out.println("avg= "+humanList
                            .stream()
-                           .collect(Collectors.averagingInt(Human::getAge)));
+                           .collect(Collectors.averagingInt(Human::getAge)).intValue());
 
-
-        System.out.println( humanList
+        System.out.println("----------------Age Min-------------------");
+        System.out.println( "min= "+humanList
                             .stream()
                             .min(Comparator
                             .comparingInt(Human::getAge))
-                            .orElseThrow(NoSuchElementException::new));
-        System.out.println(humanList
-                .stream()
-                .min(Comparator
-                .comparingInt(Human::getAge))
-                .orElseThrow(NoSuchElementException::new));
+                            .get()
+                            .getAge());
 
-        System.out.println(humanList
+        humanList.
+                stream()
+                .filter(human ->human.getAge()==humanList
+                                     .stream()
+                                     .min(Comparator
+                                     .comparingInt(Human::getAge))
+                                      .get()
+                                      .getAge())
+                .forEach(System.out::println);
+
+
+        System.out.println("----------------Age Max-------------------");
+        System.out.println("max= "+humanList
+                .stream()
+                .max(Comparator
+                .comparingInt(Human::getAge))
+                .get()
+                .getAge());
+
+        humanList.
+                stream()
+                .filter(human ->human.getAge()==humanList
+                                               .stream()
+                                               .max(Comparator
+                                               .comparingInt(Human::getAge))
+                                               .get()
+                                               .getAge())
+                .forEach(System.out::println);
+
+        System.out.println("----------------Age Sum-------------------");
+
+        System.out.println("sum= "+humanList
                            .stream()
                            .collect(Collectors.summingInt(Human::getAge)));
 

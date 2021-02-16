@@ -3,8 +3,7 @@ package az.mycompany.javalessons.OOPproject;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class SortedList {
 
@@ -25,14 +24,32 @@ public class SortedList {
         humanList.add(new Human("Samuel","McCain",43,"Pat","Jennifer"));
         humanList.add(new Human("Hermann","Baer",37,"William","Shelley"));
         humanList.add(new Human("Douglas","Grant",53,"Kevin","Susan"));
-
+        System.out.println("------------------Age sorted asc--------------------------");
         humanList
                  .stream()
-                 .sorted(Comparator.comparingInt(Human::getAge).reversed())
-                .forEach(human -> System.out.println(human.toString()));
-        System.out.println("-----------------------------------------------");
+                 .sorted(Comparator.comparingInt(Human::getAge))
+                .forEach(System.out::println);
 
-        humanList.forEach(System.out::println);
+        System.out.println("------------------Age sorted desc-----------------------------");
+
+        humanList
+                .stream()
+                .sorted(Comparator.comparingInt(Human::getAge).reversed())
+                .forEach(System.out::println);
+
+        System.out.println("----------------Name sorted asc-------------------------------");
+
+        humanList
+                .stream()
+                .sorted(Comparator.comparing(Human::getName))
+                .forEach(System.out::println);
+
+        System.out.println("------------------Name sorted desc-----------------------------");
+
+        humanList
+                .stream()
+                .sorted(Comparator.comparing(Human::getName).reversed())
+                .forEach(System.out::println);
 
 
 
