@@ -23,7 +23,7 @@ public class WriteReadFile {
         humanList.add(new Human("Samuel","McCain",43,"Pat","Jennifer"));
         humanList.add(new Human("Hermann","Baer",37,"William","Shelley"));
         humanList.add(new Human("Douglas","Grant",53,"Kevin","Susan"));
-        File file=new File("D:\\IdeaProjects\\example\\src\\main\\java\\az\\mycompany\\javalessons\\OOPproject\\out.txt");
+        File file=new File("D:\\IdeaProjects\\example\\src\\main\\java\\az\\mycompany\\javalessons\\OOPFileWriteRead\\outhuman.txt");
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))  ;
           humanList.stream()
                   .sorted(Comparator.comparingInt(Human::getAge))

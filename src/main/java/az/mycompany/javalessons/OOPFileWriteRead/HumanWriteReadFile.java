@@ -9,7 +9,7 @@ public class HumanWriteReadFile {
         Human human1=new Human();
        Human human2 =new Human("Alexande","Hunold",40,"Ernst","Diana");
 
-      String s="D:\\IdeaProjects\\example\\src\\main\\java\\az\\mycompany\\javalessons\\OOPproject\\outhuman.txt";
+      String s="D:\\IdeaProjects\\example\\src\\main\\java\\az\\mycompany\\javalessons\\OOPFileWriteRead\\outhuman.txt";
 
        try {
            FileOutputStream fops=new FileOutputStream(new File(s));
