@@ -1,21 +1,16 @@
 package az.mycompany.javalessons.OOPJDBS;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DbConnect {
 
-    private String url;
-    private String dbuser;
-    private String dbpassword;
+    private String url="jdbc:postgresql://localhost:5432/iktlab";
+    private String dbuser="postgres";
+    private String dbpassword="sys";
     private Connection conn=null;
 
-    public DbConnect(String url, String dbuser, String dbpassword) {
-        this.url = url;
-        this.dbuser = dbuser;
-        this.dbpassword = dbpassword;
+    public DbConnect() {
+
     }
 
     public Connection connectDb(){
@@ -41,4 +36,7 @@ public class DbConnect {
 
 
     return stmt;}
+
+
+
 }

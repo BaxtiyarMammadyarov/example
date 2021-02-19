@@ -1,4 +1,4 @@
-package az.mycompany.javalessons;
+package az.mycompany.javalessons.lesson13;
 
 import java.sql.*;
 import java.sql.Statement;
