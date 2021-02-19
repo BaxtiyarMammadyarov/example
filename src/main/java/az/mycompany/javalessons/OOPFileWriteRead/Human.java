@@ -1,6 +1,8 @@
 package az.mycompany.javalessons.OOPFileWriteRead;
 
-public class Human {
+import java.io.Serializable;
+
+public class Human implements Serializable {
     private  String name;
     private  String surname;
     private  int age;

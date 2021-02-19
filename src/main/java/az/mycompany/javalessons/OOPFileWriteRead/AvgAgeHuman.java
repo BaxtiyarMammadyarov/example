@@ -62,9 +62,11 @@ public class AvgAgeHuman {
 
         System.out.println("----------------Age Sum-------------------");
 
-        System.out.println("sum= "+humanList
-                                  .stream()
-                                  .collect(Collectors.summingInt(Human::getAge)));
+        System.out.println("sum= "+ (Integer) humanList
+                                                      .stream()
+                                                      .mapToInt(Human::getAge)
+                                                      .sum());
+
 
     }
 }

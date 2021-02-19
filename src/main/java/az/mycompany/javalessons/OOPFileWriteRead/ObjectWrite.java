@@ -12,7 +12,7 @@ public class ObjectWrite {
 
             FileOutputStream fileOut = new FileOutputStream(s);
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(s);
+            objectOut.writeObject(human2);
             objectOut.close();
             fileOut.close();
             System.out.println("The Object  was succesfully written to a file");
