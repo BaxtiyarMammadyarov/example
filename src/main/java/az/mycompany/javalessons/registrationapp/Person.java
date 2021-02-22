@@ -11,15 +11,27 @@ public class Person {
     public Person() {
     }
 
-    public Person(Integer id, String name, String surname, String fathername, byte age, Gender gender) {
+    public Person(Integer id, String name, String surname, String fathername, int age, String gender) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.fathername = fathername;
-        this.age = age;
-        this.gender = gender;
+        this.age = (byte) age;
+        if(gender.equals("k"))
+            this.gender = Gender.kisi;
+        else if(gender.equals("q"))
+            this.gender=Gender.qadin;
     }
-
+    public Person(String name, String surname, String fathername, int  age,String gender) {
+        this.name = name;
+        this.surname = surname;
+        this.fathername = fathername;
+        this.age = (byte) age;
+        if(gender.equals("k"))
+           this.gender = Gender.kisi;
+        else if(gender.equals("q"))
+            this.gender=Gender.qadin;
+    }
     public Integer getId() {
         return id;
     }
@@ -64,8 +76,12 @@ public class Person {
         return gender;
     }
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
+    public void setGender(String gender) {
+        if(gender.equals("k"))
+            this.gender =Gender.kisi;
+        else if (gender.equals("q"))
+             this.gender=Gender.qadin;
+        else System.out.println("Secim duzgun deyil");
     }
 
     @Override
@@ -79,4 +95,6 @@ public class Person {
                 ", gender=" + gender +
                 '}';
     }
+
+
 }
