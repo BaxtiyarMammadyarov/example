@@ -26,11 +26,9 @@ public class User {
     }
 
     public void setPassword(String password) {
-        if(passwordCheck(password))
           this.password = password;
-        else System.out.println("password 8 simvoldan azolmamalidi , herf ve reqem saxlamalidi ");
     }
-   public boolean passwordCheck(String str){
+    boolean passwordCheck(String str){
         boolean answer=false;
         int count=0;
         if(str.length()>=8){

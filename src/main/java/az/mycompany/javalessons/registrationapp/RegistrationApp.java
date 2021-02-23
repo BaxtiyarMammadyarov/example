@@ -20,7 +20,7 @@ public class RegistrationApp {
     }
 
 
-  public static void savePerson(){
+   static void savePerson(){
       DbConnect conn=new DbConnect();
       Person person=new Person();
       Scanner scn=new Scanner(System.in);
@@ -37,9 +37,9 @@ public class RegistrationApp {
 
       conn.insertTablePerson(person);
       System.out.println("Person save ");
-      conn.DisConnection();
+      conn.disConnectDb();
   }
-  public static void registerUser(){
+   static void registerUser(){
       DbConnect conn=new DbConnect();
       User user=new User();
       Scanner scn=new Scanner(System.in);
@@ -63,14 +63,14 @@ public class RegistrationApp {
 
       }
       conn.insertUserTable(user);
-      conn.DisConnection();
+      conn.disConnectDb();
 
   }
-    public static List showPerson(){
+     static List showPerson(){
       DbConnect conn=new DbConnect();
         List<List<String>> lists=new ArrayList<>();
         try {
-            Statement statement = conn.getConn().createStatement();
+            Statement statement = conn.connectDb().createStatement();
             ResultSet rs = statement.executeQuery("select * from person");
             while (rs.next()){
                 List<String>list=new ArrayList<>();
@@ -87,9 +87,9 @@ public class RegistrationApp {
         }catch (SQLException se){
             System.out.println(se.getMessage());
         }
-        conn.DisConnection();
+        conn.disConnectDb();
         return lists; }
-  public static boolean registrationApp(String comand){
+    static boolean registrationApp(String comand){
       boolean bool=true;
       switch (comand){
           case "sp":

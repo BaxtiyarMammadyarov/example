@@ -15,7 +15,7 @@ public class DbConnect {
     public DbConnect()  {
     }
 
-    public Connection getConn() {
+    public Connection connectDb() {
         try {
              conn = DriverManager.getConnection(dburl, dbuser, dbpassword);
         }catch (Exception e){
@@ -23,27 +23,28 @@ public class DbConnect {
         }
         return conn;
     }
-    public void DisConnection()  {
+    public void disConnectDb()  {
         try {
-            conn.close();
+            if(conn!=null) conn.close();
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
     }
     public void insertTablePerson(Person person){
-        if(conn==null) getConn();
+        if(conn==null) connectDb();
       try{
           Statement stmt=conn.createStatement();
           stmt.executeUpdate("insert into person(id,firstname,surname,fathername,age,gender)" +
                   "values (DEFAULT,'"+person.getName()+
                   "','"+person.getSurname()+"','"+person.getFathername()+"','"+person.getAge()+
                   "','"+person.getGender()+"')");
-          stmt.executeUpdate("commit");
+          stmt.executeQuery("commit");
           System.out.println("inset table");
 
       }catch (SQLException se){
           System.out.println(se.getMessage());
       }
+
     }
     public void insertUserTable(User user){
 
@@ -56,7 +57,7 @@ public class DbConnect {
            }
            statement.executeUpdate("insert into usertable (persom_id,username,password)" +
                    "values("+max+",'"+user.getUsername()+"','"+user.getPassword()+"')");
-           statement.executeUpdate("commit");
+           statement.executeQuery("commit");
        }catch (Exception e){
            System.out.println(e.getMessage());
 
@@ -66,7 +67,7 @@ public class DbConnect {
     public boolean userNameCheck(String username){
          boolean ans=true;
         List<String> userlist=new ArrayList<>();
-        if(conn==null) getConn();
+        if(conn==null) connectDb();
         try {
             Statement statement = conn.createStatement();
             ResultSet rs=statement.executeQuery("select username from usertable");
