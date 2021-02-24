@@ -38,9 +38,7 @@ public class DbConnect {
                   "values (DEFAULT,'"+person.getName()+
                   "','"+person.getSurname()+"','"+person.getFathername()+"','"+person.getAge()+
                   "','"+person.getGender()+"')");
-        //  stmt.executeQuery("commit");
           System.out.println("inset table");
-
       }catch (SQLException se){
           System.out.println(se.getMessage());
       }
@@ -57,7 +55,7 @@ public class DbConnect {
            }
            statement.executeUpdate("insert into usertable (persom_id,username,password)" +
                    "values("+max+",'"+user.getUsername()+"','"+user.getPassword()+"')");
-          // statement.executeQuery("commit");
+
        }catch (Exception e){
            System.out.println(e.getMessage());
 
