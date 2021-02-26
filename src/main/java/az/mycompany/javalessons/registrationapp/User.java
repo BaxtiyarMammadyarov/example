@@ -1,17 +1,19 @@
 package az.mycompany.javalessons.registrationapp;
 
-public class User {
-    private Integer person_id;
+public class User extends  Person {
+
     private String username;
     private String password;
 
-    public Integer getPerson_id() {
-        return person_id;
-    }
+   public User(){
+       super();
+   }
+   public User( String name, String surname, String fathername, Integer age, String gender,String username,String password){
+       super(   name, surname,  fathername, age,  gender);
+       this.username=username;
+       this.password=password;
 
-    public void setPerson_id(Integer person_id) {
-        this.person_id = person_id;
-    }
+   }
 
     public String getUsername() {
         return username;

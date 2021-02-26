@@ -22,20 +22,20 @@ public class RegistrationApp {
 
    static void savePerson(){
       DbConnect conn=new DbConnect();
-      Person person=new Person();
+      User user=new User();
       Scanner scn=new Scanner(System.in);
       System.out.print("Input name ");
-      person.setName(scn.next());
+      user.setName(scn.next());
       System.out.print("Input surname ");
-      person.setSurname(scn.next());
+      user.setSurname(scn.next());
       System.out.print("Input father name ");
-      person.setFathername(scn.next());
+      user.setFathername(scn.next());
       System.out.print("Input age ");
-      person.setAge(scn.nextInt());
+      user.setAge(scn.nextInt());
       System.out.println("Input gender k/q");
-       person.setGender(scn.next());
+      user.setGender(scn.next());
 
-      conn.insertTablePerson(person);
+      conn.insertTablePerson(user);
       System.out.println("Person save ");
       conn.disConnectDb();
   }
@@ -66,7 +66,7 @@ public class RegistrationApp {
       conn.disConnectDb();
 
   }
-     static List showPerson(){
+     static List personList(){
       DbConnect conn=new DbConnect();
         List<List<String>> lists=new ArrayList<>();
         try {
@@ -99,7 +99,7 @@ public class RegistrationApp {
               registerUser();
               break;
           case "shp":
-              System.out.println(showPerson());
+                  personList().forEach(System.out::println);
               break;
           case "exit":
               bool=false;

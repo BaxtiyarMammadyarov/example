@@ -30,15 +30,15 @@ public class DbConnect {
             System.out.println(e.getMessage());
         }
     }
-    public void insertTablePerson(Person person){
+    public void insertTablePerson(User user){
         if(conn==null) connectDb();
       try{
           Statement stmt=conn.createStatement();
           stmt.executeUpdate("insert into person(id,firstname,surname,fathername,age,gender)" +
-                  "values (DEFAULT,'"+person.getName()+
-                  "','"+person.getSurname()+"','"+person.getFathername()+"','"+person.getAge()+
-                  "','"+person.getGender()+"')");
-          System.out.println("inset table");
+                  "values (DEFAULT,'"+user.getName()+
+                  "','"+user.getSurname()+"','"+user.getFathername()+"','"+user.getAge()+
+                  "','"+user.getGender()+"')");
+                   System.out.println("inset table");
       }catch (SQLException se){
           System.out.println(se.getMessage());
       }
@@ -50,17 +50,17 @@ public class DbConnect {
            int max = 0;
            Statement statement = conn.createStatement();
            ResultSet rs=statement.executeQuery("select max(id)  from person");
-           while (rs.next()){
-               max= rs.getInt(1);
+          while (rs.next()){
+              max= rs.getInt(1);
            }
-           statement.executeUpdate("insert into usertable (persom_id,username,password)" +
+           statement.executeUpdate("insert into usertable (person_id,username,password)" +
                    "values("+max+",'"+user.getUsername()+"','"+user.getPassword()+"')");
-
+           System.out.println("insert usertable");
        }catch (Exception e){
            System.out.println(e.getMessage());
 
        }
-        System.out.println("insert usertable");
+
     }
     public boolean userNameCheck(String username){
          boolean ans=true;
