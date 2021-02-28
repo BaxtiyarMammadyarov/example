@@ -64,9 +64,9 @@ public class Registration {
         frame.setContentPane(new Registration().jp);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocation(100,200);
+        frame.setLocation(300,300);
         frame.setVisible(true);
-        frame.setSize(200,300);
+        frame.setSize(400,300);
 
     }
 

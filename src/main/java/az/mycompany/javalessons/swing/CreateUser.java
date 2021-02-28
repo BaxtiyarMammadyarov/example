@@ -15,9 +15,9 @@ public class CreateUser  {
     public JFrame getFrame(){
         frame1.setContentPane(new CreateUser().jp1);
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame1.setLocation(100,300);
+        frame1.setLocation(300,200);
         frame1.setVisible(true);
-        frame1.setSize(100,200);
+        frame1.setSize(300,200);
         return frame1;
     }
     public CreateUser() {
@@ -40,12 +40,17 @@ public class CreateUser  {
                     user.setPassword(password);
                     connect.insertUserTable(user);
                     JOptionPane.showMessageDialog(null,"username yaradildi");
-                    System.exit(0);
+                    frame1.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+
 
                 }else JOptionPane.showMessageDialog(null,"username ve ya password duzgun deyil");
             }
         });
     }
 
+    public static void main(String[] args) {
+       CreateUser createUser=new CreateUser();
+       createUser.getFrame();
+    }
 
 }
