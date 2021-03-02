@@ -1,10 +1,9 @@
 package az.mycompany.javalessons.swing;
 
-import az.mycompany.javalessons.registrationapp.User;
+
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 public class DbConnect {
@@ -43,6 +42,7 @@ public class DbConnect {
                     "','" + user.getSurname() + "','" + user.getFathername() + "','" + user.getAge() +
                     "','" + user.getGender() + "')");
             System.out.println("inset table");
+            disConnectDb();
         } catch (SQLException se) {
             System.out.println(se.getMessage());
         }
@@ -70,6 +70,7 @@ public class DbConnect {
             statement.executeUpdate("insert into usertable (person_id,username,password)" +
                     "values(" + max + ",'" + user.getUsername() + "','" + user.getPassword() + "')");
             System.out.println("insert usertable");
+            disConnectDb();
         } catch (Exception e) {
             System.out.println(e.getMessage());
 

@@ -1,7 +1,7 @@
 package az.mycompany.javalessons.swing;
 
 import javax.swing.*;
-import java.awt.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,28 +15,17 @@ public class Registration {
     private JButton savePersonButton;
     private  JPanel jp;
     private JTextField textField4;
-    private CreateUser createUser;
-
-
-
-
     public Registration(){
+        User user =new User();
+        canselButton.addActionListener(v-> {
 
-        canselButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
                textField1.setText("");
                textField2.setText("");
                textField3.setText("");
                 textField4.setText("");
-
-            }
         });
 
-        savePersonButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                User user =new User();
+        savePersonButton.addActionListener(v-> {
                 DbConnect connect=new DbConnect();
 
                 user.setName(textField1.getText());
@@ -50,23 +39,24 @@ public class Registration {
                 textField3.setText("");
                 textField4.setText("");
 
-               CreateUser createUser=new CreateUser();
-               createUser.getFrame();
+                 showFrame(new CreateUser(user).getJp1(),"Create user");
 
-
-            }
         });
     }
-
-
-    public static void main(String[] args) {
-        JFrame frame=new JFrame("registration");
-        frame.setContentPane(new Registration().jp);
+    public static void showFrame(JPanel jp,String title){
+        JFrame frame=new JFrame();
+        frame.setContentPane(jp);
+        frame.setTitle(title);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocation(300,300);
         frame.setVisible(true);
         frame.setSize(400,300);
+    }
+
+
+    public static void main(String[] args) {
+       showFrame(new Registration().jp,"Registration");
 
     }
 

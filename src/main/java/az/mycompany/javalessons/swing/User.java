@@ -74,6 +74,6 @@ public class User extends Person {
         }catch (SQLException se){
             System.out.println(se.getMessage());
         }
-
+        conn.disConnectDb();
         return ans;}
 }
