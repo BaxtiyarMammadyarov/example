@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Example_3 {
 
 
-    public static void  main(String[] args) {
+    public static void main(String[] args) {
         Integer[][] matrix = new Integer[3][3];
 
 
@@ -31,15 +31,17 @@ public class Example_3 {
         System.out.println(a);
 
         Arrays.stream(matrix)
-                .filter(s->{boolean bool =false;
-                    for (Integer[] integers:matrix){
-                             for (Integer integer:integers)
-                                 if(integer==a)    bool = true;
+                .filter(s -> {
+                    boolean bool = false;
+                    for (Integer[] integers : matrix) {
+                        for (Integer integer : integers)
+                            if (integer == a) bool = true;
 
 
-        }
+                    }
 
-                return bool;}).collect(Collectors.toList()).forEach(System.out::println);
+                    return bool;
+                }).collect(Collectors.toList()).forEach(System.out::println);
     }
 }
 

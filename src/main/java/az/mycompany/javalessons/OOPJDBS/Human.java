@@ -44,8 +44,8 @@ public class Human {
     }
 
     public void setAge(int age) {
-      if(age<200 && age>1)  this.age = age;
-      else System.out.println("yas duzgun daxil edilmeyib");
+        if (age < 200 && age > 1) this.age = age;
+        else System.out.println("yas duzgun daxil edilmeyib");
     }
 
     public Human getFather() {

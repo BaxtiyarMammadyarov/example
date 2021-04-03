@@ -1,9 +1,7 @@
 package az.mycompany.javalessons.swing;
 
 
-
 import java.sql.*;
-
 
 
 public class DbConnect {
@@ -50,8 +48,6 @@ public class DbConnect {
     }
 
 
-
-
     public static void main(String[] args) {
         DbConnect conn = new DbConnect();
         conn.connectDb();
@@ -60,7 +56,8 @@ public class DbConnect {
 
     public void insertUserTable(az.mycompany.javalessons.swing.User user) {
 
-        try {if(conn==null) connectDb();
+        try {
+            if (conn == null) connectDb();
             int max = 0;
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery("select max(id)  from person");
@@ -77,5 +74,5 @@ public class DbConnect {
         }
 
     }
-    }
+}
 

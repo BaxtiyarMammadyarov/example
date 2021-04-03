@@ -1,72 +1,73 @@
 package az.mycompany.javalessons.lesson9;
 
 public class Example4 {
-     class Human{
+    class Human {
         String name;
         String surname;
-         int dateofbirthyear ;
-         byte iqlevel ;// (a whole number from 1 to 100))
-          Pet  pet ;
-          Human mother;// (object type Human)
-           Human father;// (object type Human)
+        int dateofbirthyear;
+        byte iqlevel;// (a whole number from 1 to 100))
+        Pet pet;
+        Human mother;// (object type Human)
+        Human father;// (object type Human)
 
-         public String getName() {
-             return name;
-         }
+        public String getName() {
+            return name;
+        }
 
-         public void setName(String name) {
-             this.name = name;
-         }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-         public String getSurname() {
-             return surname;
-         }
+        public String getSurname() {
+            return surname;
+        }
 
-         public void setSurname(String surname) {
-             this.surname = surname;
-         }
+        public void setSurname(String surname) {
+            this.surname = surname;
+        }
 
-         public int getDateofbirthyear() {
-             return dateofbirthyear;
-         }
+        public int getDateofbirthyear() {
+            return dateofbirthyear;
+        }
 
-         public void setDateofbirthyear(int dateofbirthyear) {
-             this.dateofbirthyear = dateofbirthyear;
-         }
+        public void setDateofbirthyear(int dateofbirthyear) {
+            this.dateofbirthyear = dateofbirthyear;
+        }
 
-         public byte getIqlevel() {
-             return iqlevel;
-         }
+        public byte getIqlevel() {
+            return iqlevel;
+        }
 
-         public void setIqlevel(int iqlevel) {
-            if(iqlevel>=1||iqlevel<=100)  this.iqlevel =(byte) iqlevel;
-         }
+        public void setIqlevel(int iqlevel) {
+            if (iqlevel >= 1 || iqlevel <= 100) this.iqlevel = (byte) iqlevel;
+        }
 
-         public Pet getPet() {
-             return pet;
-         }
+        public Pet getPet() {
+            return pet;
+        }
 
-         public void setPet(Pet pet) {
-             this.pet = pet;
-         }
+        public void setPet(Pet pet) {
+            this.pet = pet;
+        }
 
-         public Human getMother() {
-             return mother;
-         }
+        public Human getMother() {
+            return mother;
+        }
 
-         public void setMother(Human mother) {
-             this.mother = mother;
-         }
+        public void setMother(Human mother) {
+            this.mother = mother;
+        }
 
-         public Human getFather() {
-             return father;
-         }
+        public Human getFather() {
+            return father;
+        }
 
-         public void setFather(Human father) {
-             this.father = father;
-         }
-     }
-    class Pet{
+        public void setFather(Human father) {
+            this.father = father;
+        }
+    }
+
+    class Pet {
         String species;
         String nickname;
         byte age;
@@ -94,7 +95,7 @@ public class Example4 {
         }
 
         public void setTrickLevel(int trickLevel) {
-            if(trickLevel>=1||trickLevel<=100) this.trickLevel = (byte) trickLevel;
+            if (trickLevel >= 1 || trickLevel <= 100) this.trickLevel = (byte) trickLevel;
             else System.out.println("input a whole number from 1 to 100");
         }
 
@@ -105,7 +106,6 @@ public class Example4 {
         public void setHabits(String[] habits) {
             this.habits = habits;
         }
-
 
 
         public String getSpecies() {

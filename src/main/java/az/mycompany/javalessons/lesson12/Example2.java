@@ -9,11 +9,10 @@ import java.util.stream.Collectors;
 public class Example2 {
 
     public static void main(String[] args) {
-        List<String>list= Arrays.asList("Red","Green","Black","White","Pink");
+        List<String> list = Arrays.asList("Red", "Green", "Black", "White", "Pink");
 
-        BiPredicate<String,List<String>> searchList=(String, List)->(List.contains(String));
-        System.out.println(searchList.test("Green",list));
-
+        BiPredicate<String, List<String>> searchList = (String, List) -> (List.contains(String));
+        System.out.println(searchList.test("Green", list));
 
 
     }

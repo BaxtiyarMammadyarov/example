@@ -1,11 +1,11 @@
 package az.mycompany.javalessons.kassa;
 
 
-
 public class Product {
     private int product_id;
     private String product_name;
     private int product_price;
+
     public Product(int product_id, String product_name, int product_price) {
         this.product_id = product_id;
         this.product_name = product_name;

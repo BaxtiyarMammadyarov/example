@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class ForExp {
     public static void main(String[] args) {
-        int sum=0;
+        int sum = 0;
         String str;
-        Scanner scn=new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         System.out.print("bir eded daxil edin : ");
-        int num=scn.nextInt();
+        int num = scn.nextInt();
 
         for (int i = 0; i < num; i++) {
 

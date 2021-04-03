@@ -4,19 +4,19 @@ import java.sql.*;
 
 public class DbConnect {
 
-    private String url="jdbc:postgresql://localhost:5432/iktlab";
-    private String dbuser="postgres";
-    private String dbpassword="sys";
-    private Connection conn=null;
+    private String url = "jdbc:postgresql://localhost:5432/iktlab";
+    private String dbuser = "postgres";
+    private String dbpassword = "sys";
+    private Connection conn = null;
 
     public DbConnect() {
 
     }
 
-    public Connection connectDb(){
+    public Connection connectDb() {
 
         try {
-            conn= DriverManager.getConnection(url,dbuser,dbpassword);
+            conn = DriverManager.getConnection(url, dbuser, dbpassword);
 
             System.out.println("Ugurlu connection");
         } catch (SQLException throwables) {
@@ -26,17 +26,17 @@ public class DbConnect {
         return conn;
     }
 
-    public Statement creatStm(){
+    public Statement creatStm() {
         Statement stmt = null;
         try {
-           stmt= conn.createStatement();
+            stmt = conn.createStatement();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
 
-    return stmt;}
-
+        return stmt;
+    }
 
 
 }

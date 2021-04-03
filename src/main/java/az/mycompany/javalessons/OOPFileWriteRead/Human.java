@@ -3,17 +3,17 @@ package az.mycompany.javalessons.OOPFileWriteRead;
 import java.io.Serializable;
 
 public class Human implements Serializable {
-    private  String name;
-    private  String surname;
-    private  int age;
+    private String name;
+    private String surname;
+    private int age;
     private String fathername;
-    private  String mothername;
+    private String mothername;
 
     public Human() {
 
     }
 
-    public Human(String name, String surname,int age, String fathername, String mothername) {
+    public Human(String name, String surname, int age, String fathername, String mothername) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -65,9 +65,9 @@ public class Human implements Serializable {
     public String toString() {
         return
                 "name= " + name + "\n" +
-                "surname= " + surname + "\n"+
-                "age= " + age +"\n"+
-                "fathername= " + fathername + "\n" +
-                "mothername= " + mothername + "\n" ;
+                        "surname= " + surname + "\n" +
+                        "age= " + age + "\n" +
+                        "fathername= " + fathername + "\n" +
+                        "mothername= " + mothername + "\n";
     }
 }

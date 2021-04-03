@@ -5,7 +5,7 @@ public class Person {
     private String name;
     private String surname;
     private String fathername;
-    private byte age ;
+    private byte age;
     private Gender gender;
 
     public Person() {
@@ -17,21 +17,23 @@ public class Person {
         this.surname = surname;
         this.fathername = fathername;
         this.age = (byte) age;
-        if(gender.equals("k"))
+        if (gender.equals("k"))
             this.gender = Gender.kisi;
-        else if(gender.equals("q"))
-            this.gender= Gender.qadin;
+        else if (gender.equals("q"))
+            this.gender = Gender.qadin;
     }
-    public Person(String name, String surname, String fathername, int  age,String gender) {
+
+    public Person(String name, String surname, String fathername, int age, String gender) {
         this.name = name;
         this.surname = surname;
         this.fathername = fathername;
         this.age = (byte) age;
-        if(gender.equals("k"))
-           this.gender = Gender.kisi;
-        else if(gender.equals("q"))
-            this.gender= Gender.qadin;
+        if (gender.equals("k"))
+            this.gender = Gender.kisi;
+        else if (gender.equals("q"))
+            this.gender = Gender.qadin;
     }
+
     public Integer getId() {
         return id;
     }
@@ -77,10 +79,10 @@ public class Person {
     }
 
     public void setGender(String gender) {
-        if(gender.equals("male"))
+        if (gender.equals("male"))
             this.gender = Gender.kisi;
         else if (gender.equals("famale"))
-             this.gender= Gender.qadin;
+            this.gender = Gender.qadin;
         else System.out.println("Secim duzgun deyil");
     }
 

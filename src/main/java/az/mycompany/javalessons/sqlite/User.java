@@ -1,9 +1,9 @@
 package az.mycompany.javalessons.sqlite;
 
 public class User {
-    private int id ;
+    private int id;
     private String username;
-    private  String password;
+    private String password;
 
     public User() {
     }

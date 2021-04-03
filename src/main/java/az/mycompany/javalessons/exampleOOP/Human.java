@@ -1,20 +1,20 @@
 package az.mycompany.javalessons.exampleOOP;
 
 
+public class Human {
+    private String name;
+    private String surname;
+    private int dateofbirthyear;
+    private byte iqlevel;// (a whole number from 1 to 100))
 
-public  class Human  {
-   private String name;
-   private String surname;
-   private int dateofbirthyear ;
-    private byte iqlevel ;// (a whole number from 1 to 100))
-    public Human(){
+    public Human() {
 
     }
-    public Human(String name,String surname){
-        this.name=name;
-        this.surname=surname;
-    }
 
+    public Human(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
 
 
     public String getName() {
@@ -46,8 +46,8 @@ public  class Human  {
     }
 
     public void setIqlevel(int iq) {
-       if(iqlevel>=1||iqlevel<=100) iqlevel = (byte) iq;
-       else System.out.println("iq a whole number from 1 to 100");
+        if (iqlevel >= 1 || iqlevel <= 100) iqlevel = (byte) iq;
+        else System.out.println("iq a whole number from 1 to 100");
     }
 
 }

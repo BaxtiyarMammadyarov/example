@@ -9,13 +9,14 @@ public class Example5 {
         kaprekarNumber(9);
 
     }
-    public static void kaprekarNumber(int number){
 
-        String strnum=Integer.toString(number*number);
-        int num1 =Integer.parseInt(strnum.substring(0,strnum.length()/2));
-        int num2 =Integer.parseInt(strnum.substring(strnum.length()/2));
+    public static void kaprekarNumber(int number) {
+
+        String strnum = Integer.toString(number * number);
+        int num1 = Integer.parseInt(strnum.substring(0, strnum.length() / 2));
+        int num2 = Integer.parseInt(strnum.substring(strnum.length() / 2));
         System.out.println(num1 + num2);
-        if((num1 + num2)==number) System.out.println(number+" is a Kaprekar Number");
-        else System.out.println(number+" is not a Kaprekar Number");
+        if ((num1 + num2) == number) System.out.println(number + " is a Kaprekar Number");
+        else System.out.println(number + " is not a Kaprekar Number");
     }
 }

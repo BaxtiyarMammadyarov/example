@@ -7,10 +7,10 @@ import java.sql.Statement;
 public class Main {
     public static void main(String[] args) throws SQLException {
 
-        DbConnect con=new DbConnect();
+        DbConnect con = new DbConnect();
         con.connectDb();
-        Statement stmt=con.creatStm();
-        ResultSet set= null;
+        Statement stmt = con.creatStm();
+        ResultSet set = null;
         try {
             set = stmt.executeQuery("select human.name,human.surname from public.human");
 
@@ -18,8 +18,8 @@ public class Main {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        while (set.next()){
-            System.out.println(set.getString(1)+" "+set.getString(2));
+        while (set.next()) {
+            System.out.println(set.getString(1) + " " + set.getString(2));
         }
 
     }
